@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+	<html>
+		<head>
+			<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+			<title>Занесення завдання</title>
+			<link href="style.css" rel="stylesheet">
+		</head>
+  <body>
+<form method="post" action="insert_homework.php">
+  <select title="Виберіть день тижня" name="day" size="5" multiple>
+    <option selected value="monday">Понеділок</option>
+    <option value="tuesday">Вівторок</option>
+    <option value="wednesday">Середа</option>
+    <option value="thursday">Четвер</option>
+    <option value="friday">П'ятниця</option>
+  </select>
+  <select title="Виберіть номер уроку" name="lesson" size="6" multiple>
+    <option selected value=1>Перший</option>
+    <option value=2>Другий</option>
+    <option value=3>Третій</option>
+    <option value=4>Четвертий</option>
+    <option value=5>П'ятий</option>
+    <option value=6>Шостий</option>
+  </select>
+  <textarea title="Після вибору дня тижня та номеру уроку введіть сюди завдання" wrap="hard" cols="11" rows="3" placeholder="Тут треба ввести домашне завдання" name='work'></textarea>
+  <input type='submit' value='Зберегти'>
+</form>
+  <a href='read_homework.php'>Повернутись до домашніх завдань</a><br>
+  <a href='index.html'>Повернутись до розкладу занять</a><br>
+  </body>
+  </html>
