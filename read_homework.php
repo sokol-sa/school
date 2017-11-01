@@ -39,6 +39,9 @@
 	echo	"</table>";
     // close connect
 	mysql_close();
-	echo 	"<a href='index.html'>Повернутись до розкладу занять</a><br>";
-	echo	"<a href='input.html'>Внести домашні завдання</a>";
+	echo 	"<a href='read_news.php'>До новин</a><br>";
+	echo 	"<a href='index.html'>До розкладу занять</a><br>";
+	echo	"<a href='input.html'>Внести домашні завдання</a><br>";
+	echo	"<a href='input_news.html'>Внести новини</a>";
+
 ?>
