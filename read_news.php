@@ -14,7 +14,11 @@
 	$read_from_SQL = mysql_query("SELECT * FROM $nameTABLE ORDER BY news_date DESC");
     if (!mysql_error()) {
     // Цикл, вынимающий строку как массив с числовым индексом
+<<<<<<< HEAD
         while ($row = mysql_fetch_row($read_from_SQL)) {
+=======
+        while ($row = mysql_fetch_row($result)) {
+>>>>>>> f468433bd27317790369e3680f61176645fb5ede
           print("<tr><td><h3>". $row[1]. "</h3>");
           print("<font size=-1>". $row[2]. "</font>");
           print("<p align=justify>". $row[0]. "</p>");
@@ -30,8 +34,12 @@
     //mysql_free_result ($result);
     // close connect
 	mysql_close();
+<<<<<<< HEAD
 	echo 	"<a href='index.html'>До розкладу занять</a><br>";
     echo    "<a href='read_homework.php'>До домашніх завдань</a><br>";
+=======
+	echo 	"<a href='index.html'>Повернутись до розкладу занять</a><br>";
+>>>>>>> f468433bd27317790369e3680f61176645fb5ede
 	echo	"<a href='input.html'>Внести домашні завдання</a>"<br>;
     echo	"<a href='input_news.html'>Внести новини</a>";
 ?>
