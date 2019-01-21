@@ -11,35 +11,32 @@
 	// select DB
 	mysql_select_db($nameDB) or die(mysql_error());
     // read data from DB
-	$read_from_SQL = mysql_query("SELECT * FROM $nameTABLE ORDER BY news_date DESC");
+	$read_from_SQL = mysql_query("SELECT news_text, news_title, news_date FROM $nameTABLE ORDER BY news_date DESC LIMIT 10");
+   	echo	"<head>
+			<meta http-equiv='Content-Type' content='text/html\; charset=utf-8'>
+			<title>Новини</title>
+			<link href='style.css' rel='stylesheet'>
+    		</head>";
     if (!mysql_error()) {
     // Цикл, вынимающий строку как массив с числовым индексом
-<<<<<<< HEAD
         while ($row = mysql_fetch_row($read_from_SQL)) {
-=======
-        while ($row = mysql_fetch_row($result)) {
->>>>>>> f468433bd27317790369e3680f61176645fb5ede
-          print("<tr><td><h3>". $row[1]. "</h3>");
-          print("<font size=-1>". $row[2]. "</font>");
-          print("<p align=justify>". $row[0]. "</p>");
+          echo "<tr><td><h3>". $row[1]. "</h3>";
+          echo "<font size=-1>". $row[2]. "</font>";
+          echo "<p align=justify>". $row[0]. "</p>";
           };
         }
     /* в случае ошибки БД программа выводит сообщение сервера (конечно, можно обойтись 
     без такой проверки, но тогда пользователю посыплются ругательства PHP). */
     else {
-      print ("Ошибка БД в запросе "$request". MySQL пишет ". mysql_error());
+      print ("Ошибка БД в запросе . MySQL пишет: ". mysql_error());
     };
     /* если дальше предусмотрено выполнение каких-либо операций, лучше всего сразу 
     очистить память */
-    //mysql_free_result ($result);
+    mysql_free_result ($read_from_SQL);
     // close connect
 	mysql_close();
-<<<<<<< HEAD
 	echo 	"<a href='index.html'>До розкладу занять</a><br>";
     echo    "<a href='read_homework.php'>До домашніх завдань</a><br>";
-=======
-	echo 	"<a href='index.html'>Повернутись до розкладу занять</a><br>";
->>>>>>> f468433bd27317790369e3680f61176645fb5ede
-	echo	"<a href='input.html'>Внести домашні завдання</a>"<br>;
+	echo	"<a href='input.html'>Внести домашні завдання</a><br>";
     echo	"<a href='input_news.html'>Внести новини</a>";
 ?>

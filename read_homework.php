@@ -30,8 +30,8 @@
     while ($row=mysql_fetch_row($read_from_SQL)){
 			echo	"<tr>";
 		for ($i=1; $i<count($row); $i++) {
-				$homework[i][j]=$row[$i];
-				echo	"<td>".$homework[i][j]."</td>";
+				$homework[$i][$j]=$row[$i];
+				echo	"<td>".$homework[$i][$j]."</td>";
 		}
 		echo 	"</tr>";
 		$j++;
@@ -43,5 +43,4 @@
 	echo 	"<a href='index.html'>До розкладу занять</a><br>";
 	echo	"<a href='input.html'>Внести домашні завдання</a><br>";
 	echo	"<a href='input_news.html'>Внести новини</a>";
-
 ?>
