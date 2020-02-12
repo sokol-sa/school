@@ -2,7 +2,7 @@
 	// variables for work with DB
 	$nameDB = "shcool";// name of DB
 	$nameTABLE = "homework"; //name of table in DB
-	$nameSERVER = "pesochin.ddns.net";// server of DB
+	$nameSERVER = "pesochin.sytes.net";// server of DB
 	$nameUSER = "shcool";// user of DB
 	$passUSER = "37912560_mysql";// password of DB
     // connect with server of DB
